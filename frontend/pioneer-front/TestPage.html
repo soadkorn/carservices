@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Fetch Data Example</h1>
+    <button onclick="fetchData()">Fetch Data</button>
+    <div id="dataContainer"></div>
+
+    <script>
+        function fetchData() {
+            // Отправка GET запроса на сервер
+            axios.get('http://localhost:8060/user/mock')
+                .then(function (response) {
+                    // Обработка успешного ответа
+                    console.log(response.data);
+                    document.getElementById('dataContainer').innerHTML = JSON.stringify(response.data);
+                })
+                .catch(function (error) {
+                    console.error('Ошибка при запросе:', error);
+                });
+        }
+    </script>
+</body>
+</html>

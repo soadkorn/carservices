@@ -1,0 +1,432 @@
+@font-face {
+    font-family: mainfont;
+    src: url(./Syncopate\ Bold\ Cyr.otf);
+}
+
+.page-header {
+    display: flex;
+    justify-content: center;
+    /*border: 2px solid red;*/
+    padding: 3vh 0 3vh;
+}
+
+.logo {
+    height: 30px;
+}
+
+html {
+    background-image: url('./background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: mainfont;
+    display: flex;
+    justify-content: center;
+    border: none;
+  }
+  
+  /*button {
+    background-color: aliceblue;
+    padding-bottom: 3%;
+    padding-top: 5%;
+    border: none;
+    border-bottom: 3px solid aliceblue;
+    color: aliceblue;
+    background-color: transparent;
+    width: 100%;
+    font-weight:lighter;
+    text-align: center;
+    font-family: mainfont;
+    text-transform: uppercase;
+    border-radius: 0;
+  }
+  
+  button:hover {
+    border-bottom: 3px solid red;
+    background: rgba(255, 255, 255, 0.027);
+  }*/
+  button {
+    background-color: transparent; /* Устанавливаем прозрачный фон по умолчанию */
+    padding-bottom: 3%;
+    padding-top: 5%;
+    border: none;
+    border-bottom: 3px solid red;
+    color: aliceblue;
+    width: 100%;
+    font-weight: lighter;
+    text-align: center;
+    font-family: mainfont;
+    text-transform: uppercase;
+    border-radius: 0;
+    transition: background 0.5s; /* Добавляем плавное переходное состояние для фона */
+    background: linear-gradient(to bottom, transparent 50%, red 50%); /* Используем градиент для создания эффекта выезжающего сверху вниз */
+    background-size: 100% 200%; /* Размер фона */
+    background-position: 0 0; /* Начальное положение фона (вверху) */
+}
+
+button:hover {
+    background-position: 0 100%; /* Конечное положение фона (внизу) */
+}
+
+  
+  button:active {
+    background-color: rgb(95, 15, 15);
+    border-bottom: 3px solid rgb(95, 15, 15);
+  }
+
+  
+  p {
+    margin: 15px;
+  }
+  
+  .main-container{
+    /*border: 2px solid yellow;*/
+    background-color: black;
+    border-radius: 10px;
+    min-width: 300px;
+    place-content: center;
+    margin-top: 23vh;
+    padding: 3vh;
+    width: 25vw;
+    height: auto;
+    text-transform: uppercase;
+  }
+
+.user-type-main-cont {
+    /*border: 2px solid green;*/
+    padding: 0 5% 5% 5%;
+    margin: 0;
+    display: block;
+
+  }
+  
+  .user-types-buttons{
+    /*border: 2px solid purple;*/
+    display: block;
+  }
+  
+  .slogan {
+    font-family: mainfont;
+    text-align: left;
+    font-weight: bold;
+    font-size: 2.3vh;
+    color: white;
+    line-height: 3.2vh;
+    margin: 0;
+  }
+  /*Хз, Осанов сказал что белый прямоугольник это кринж, но мне нравится, поэтому пусть лежит тут*/
+  /*.sloganContainer {
+    justify-content: center;
+    background-color: aliceblue;
+    padding: 5%;
+    box-sizing: border-box;
+    width: 100%;
+  }*/ 
+
+  .slogan-container {
+    justify-content: center;
+    background-color: transparent;
+    padding: 5%;
+    width: 100%;
+  }
+
+  .user-option-button:hover{
+    border-bottom: 3px solid red;
+  }
+  
+  .user-option-button:active{
+    border-bottom: 3px solid rgb(95, 15, 15);
+  }
+
+  .login-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .email-input{
+    font-family: mainfont;
+    width: 100%;
+    padding: 1vh;
+    text-transform: uppercase;
+    margin: 0 0 1vh 0;
+    box-sizing: border-box;
+  }
+
+  .pass-input{
+    font-family: mainfont;
+    width: 100%;
+    padding: 1vh;
+    text-transform: uppercase;
+    margin: 0 0 1vh 0;
+    box-sizing: border-box;
+  }
+
+  .base-input {
+    font-family: mainfont;
+    width: 100%;
+    padding: 1vh;
+    text-transform: uppercase;
+    margin: 0 0 1vh 0;
+    box-sizing: border-box;
+  }
+
+/*Стили для компонента ServiceSelector*/
+
+  .service-container {
+    color: aliceblue;
+    font-size: medium;
+    text-align: center;
+  }
+
+  .service-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .service-option {
+    padding: 5%;
+  }
+  .service-icon {
+    width: 7vw;
+    filter: invert();
+  }
+
+ /*Стили для компонента OrganizationSelector*/
+    .organization-list{
+        scroll-snap-type: y;
+        scroll-behavior: smooth;
+        overflow-y: auto;
+        height: 20vh;
+    }
+
+   .org-container {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5%;
+    line-height: 3vh;
+   }
+
+   .org-searchbar {
+    font-family: mainfont;
+    width: 100%;
+    padding: 1vh;
+    text-transform: uppercase;
+    margin: 0 0 1vh 0;
+   }
+
+   .selected-org {
+    padding: 3%;
+    margin: 0;
+    background-color: aliceblue;
+    color: black;
+    font-size: 1.3vh;
+   }
+
+   .org-name {
+    color: aliceblue;
+    text-decoration: none;
+    border: none;
+    text-align: left;
+   }
+
+   .org-name:hover {
+    border: none;
+   }
+
+   .org-searchbar {
+    box-sizing: border-box;
+   }
+
+/*Стили для компонента ServiceStructure*/
+
+    .service-structure {
+      color: aliceblue;
+    }
+
+    .service-item {
+      padding: 3%;
+    }
+
+/*Стили для компонента ServiceStructure*/
+
+.date-time-container {
+  color: aliceblue;
+  line-height: 3vh;
+}
+
+.date-selector {
+  margin: 3% 0 3% 0;
+}
+
+.select-time {
+  margin: 0 5% 0 0;
+}
+
+.time-picker {
+  font-family: mainfont;
+  background-color: transparent;
+}
+
+.selected-date-time {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-picker-label {
+  margin-right: 15px;
+}
+
+.select {
+  font-family: mainfont;
+  margin-bottom: 15px;
+}    .select select {
+    margin: auto;
+      cursor: pointer;
+      padding: 1vh 1vw;
+      outline: 0;
+      border: 2px solid #ff0000;
+      background: transparent;
+      color: aliceblue;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+  }
+      .select select:hover,
+      .select select:focus {
+          color: aliceblue;
+          background: black ;
+      }
+
+/*Стили для компонента ConfirmPage*/
+
+.confirmation-page{
+  color: aliceblue;
+}
+
+/*Стили для компонента ConnectionForm*/
+
+.org-connection-container {
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Стили для компонента ConnectionForm*/
+
+.form-list{
+  color: aliceblue;
+    line-height: 30px;
+    scroll-snap-type: y;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    height: 40vh;
+}
+
+/*ConnectionForm*/
+
+.org-connection-container {
+  display: flex;
+  scroll-snap-type: y;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  height: 40vh;
+  line-height: 4vh;
+}
+
+*::-webkit-scrollbar {
+  height: 28px;
+  width: 28px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: transparent;
+  border: 10px solid black;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 9px;
+  background-color: #850000;
+  border: 10px solid black;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #FF0000;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #FF0000;
+}
+
+.status {
+  margin-bottom: 3vh;
+}
+
+.input-label {
+  padding: auto;
+}
+
+ .error-message {
+     color: red;
+ }
+
+.shake-animation {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
+.navigation-bar{
+  color: aliceblue;
+  display: flex;
+  line-height: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.go-back-button {
+  width: 30px;
+  margin: 15px;
+}
+
+.username {
+  text-align: right;
+}
+
+.user-picture {
+  width: 30px;
+  height: 30px;
+  margin: 15px;
+}
+
+.left-section {
+  /* Добавьте необходимые стили для раздела слева, например, отступ справа */
+  margin-right: 20px;
+  height: 60px;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.filters {
+    display: flex;
+}
